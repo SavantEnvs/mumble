@@ -1,0 +1,8 @@
+project: savantenvs/mumble
+target: fuzz_htmlfilter
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_htmlfilter/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_htmlfilter
+    libfuzzer: true
